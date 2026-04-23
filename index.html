@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menuka Dewsith — Full-Stack Developer</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+  <!-- ═══════════════════════════════════
+       NAVBAR — Bootstrap Navbar + Offcanvas
+  ═══════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <span class="brand-bracket">&lt;</span>MD<span class="brand-bracket">/&gt;</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+        <i class="fas fa-bars-staggered"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarLinks">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item ms-2">
+            <a class="nav-link nav-gh-btn" href="https://github.com/" target="_blank">
+              <i class="fab fa-github me-1"></i>GitHub
+            </a>
+          </li>
+          <li class="nav-item ms-1">
+            <a class="btn btn-nav-cta" href="#contact">Let's Talk</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap Offcanvas (Mobile Menu) -->
+  <div class="offcanvas offcanvas-end offcanvas-menu" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <span class="navbar-brand"><span class="brand-bracket">&lt;</span>MD<span class="brand-bracket">/&gt;</span></span>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column gap-2">
+        <li class="nav-item"><a class="nav-link offcanvas-link" href="#about" data-bs-dismiss="offcanvas">About</a></li>
+        <li class="nav-item"><a class="nav-link offcanvas-link" href="#skills" data-bs-dismiss="offcanvas">Skills</a></li>
+        <li class="nav-item"><a class="nav-link offcanvas-link" href="#projects" data-bs-dismiss="offcanvas">Projects</a></li>
+        <li class="nav-item"><a class="nav-link offcanvas-link" href="#education" data-bs-dismiss="offcanvas">Education</a></li>
+        <li class="nav-item"><a class="nav-link offcanvas-link" href="#blog" data-bs-dismiss="offcanvas">Blog</a></li>
+        <li class="nav-item mt-3">
+          <a class="btn btn-nav-cta w-100 text-center" href="#contact" data-bs-dismiss="offcanvas">Let's Talk</a>
+        </li>
+      </ul>
+      <div class="offcanvas-socials mt-4">
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════ -->
+  <section id="hero" class="hero-section">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-noise"></div>
+    <div class="container h-100">
+      <div class="row align-items-center h-100 min-vh-100">
+        <!-- Left: Text -->
+        <div class="col-lg-6 hero-text">
+          <div class="hero-status reveal">
+            <span class="status-dot"></span>
+            <span>Available for internship &amp; projects</span>
+          </div>
+
+          <h1 class="hero-h1 reveal delay-1">
+            Hi, I'm<br/>
+            <span class="hero-name">Menuka<br/>Dewsith</span>
+          </h1>
+
+          <div class="hero-subtitle reveal delay-2">
+            <span class="mono-tag">&lt;</span>
+            Computer Science Undergraduate
+            <span class="mono-tag">/&gt;</span>
+          </div>
+
+          <p class="hero-desc reveal delay-3">
+            I build <em>scalable full-stack applications</em> with clean architecture,
+            efficient databases, and real-world problem solving.
+            Focused on <strong>backend systems</strong>, PostgreSQL, and modern web tech.
+          </p>
+
+          <!-- Bootstrap Button Group -->
+          <div class="d-flex flex-wrap gap-3 hero-btns reveal delay-4">
+            <a href="#projects" class="btn btn-hero-primary">
+              <i class="fas fa-rocket me-2"></i>View Projects
+            </a>
+            <a href="#" class="btn btn-hero-outline" id="downloadCV">
+              <i class="fas fa-file-arrow-down me-2"></i>Download CV
+            </a>
+          </div>
+
+          <!-- Bootstrap Badge row -->
+          <div class="hero-badges reveal delay-5">
+            <span class="badge badge-tech">React</span>
+            <span class="badge badge-tech">Node.js</span>
+            <span class="badge badge-tech">PostgreSQL</span>
+            <span class="badge badge-tech">Express</span>
+            <span class="badge badge-tech">Docker</span>
+          </div>
+        </div>
+
+        <!-- Right: Terminal card -->
+        <div class="col-lg-6 d-flex justify-content-center align-items-center reveal delay-3">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="t-dots">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+              </div>
+              <span class="t-title">menuka@portfolio ~ zsh</span>
+            </div>
+            <div class="terminal-body" id="terminalBody"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════ -->
+  <section id="about" class="py-section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Stats column -->
+        <div class="col-lg-4">
+          <div class="about-stats-wrap">
+            <!-- Bootstrap Cards -->
+            <div class="row g-3" id="statsGrid">
+              <div class="col-6">
+                <div class="stat-block">
+                  <span class="stat-n" data-target="4">0</span><span class="stat-plus">+</span>
+                  <p>Projects Built</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-block">
+                  <span class="stat-n" data-target="10">0</span><span class="stat-plus">+</span>
+                  <p>Technologies</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-block">
+                  <span class="stat-n" data-target="2">0</span><span class="stat-plus">+</span>
+                  <p>Years Coding</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-block accent-block">
+                  <i class="fas fa-code stat-icon"></i>
+                  <p>Open to Work</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Link Block -->
+            <a href="https://github.com/" target="_blank" class="github-block mt-3 d-flex align-items-center gap-3">
+              <i class="fab fa-github fa-2x"></i>
+              <div>
+                <div class="gh-label">GitHub Profile</div>
+                <div class="gh-sub">github.com/MenukaDewsith</div>
+              </div>
+              <i class="fas fa-arrow-right ms-auto"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="col-lg-8">
+          <div class="section-eyebrow">// About Me</div>
+          <h2 class="section-h2">Focused on Systems,<br/><span class="text-accent">Not Just Screens</span></h2>
+          <p class="body-text">
+            I'm an undergraduate Computer Science student with a strong focus on building structured, scalable software systems. I enjoy working on full-stack applications, especially backend development and database design using PostgreSQL.
+          </p>
+          <p class="body-text">
+            My goal is to become a skilled software engineer capable of designing efficient systems that solve real-world problems. I am continuously improving my skills by building projects, exploring new technologies, and understanding how systems work at a deeper level.
+          </p>
+
+          <!-- Bootstrap Pills (Process highlights) -->
+          <div class="process-pills d-flex flex-wrap gap-2 mt-4">
+            <span class="pill"><i class="fas fa-layer-group me-1"></i>Clean Architecture</span>
+            <span class="pill"><i class="fas fa-database me-1"></i>DB Design</span>
+            <span class="pill"><i class="fas fa-cubes me-1"></i>Modular Code</span>
+            <span class="pill"><i class="fas fa-bolt me-1"></i>Performance First</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       SKILLS — Bootstrap Accordion + Grid
+  ═══════════════════════════════════ -->
+  <section id="skills" class="py-section bg-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-eyebrow mx-auto">// Tech Stack</div>
+        <h2 class="section-h2">Skills & Tools</h2>
+      </div>
+
+      <!-- Desktop: skill grid -->
+      <div class="skills-master-grid" id="skillsGrid"></div>
+
+      <!-- Mobile: Bootstrap Accordion -->
+      <div class="accordion skills-accordion d-lg-none mt-4" id="skillsAccordion"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       HOW I BUILD
+  ═══════════════════════════════════ -->
+  <section id="process" class="py-section">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-5">
+          <div class="section-eyebrow">// My Edge</div>
+          <h2 class="section-h2">How I Build</h2>
+          <p class="body-text">I focus on systems, not just interfaces. Every project starts with architecture decisions, not UI mockups.</p>
+          <div class="process-steps" id="processSteps"></div>
+        </div>
+        <div class="col-lg-7">
+          <!-- Featured Project Deep Dive Card -->
+          <div class="deep-dive-card">
+            <div class="dd-eyebrow">Featured Deep Dive</div>
+            <h3 class="dd-title">Developer Growth OS</h3>
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <div class="dd-panel problem-panel">
+                  <div class="dd-panel-label">Problem</div>
+                  <p>Developers struggle to track consistency and measure progress over time.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="dd-panel solution-panel">
+                  <div class="dd-panel-label">Solution</div>
+                  <p>Full-stack system tracking coding activity and visualizing productivity trends.</p>
+                </div>
+              </div>
+            </div>
+            <div class="dd-features">
+              <div class="dd-feature"><i class="fas fa-circle-check"></i>GitHub activity tracking</div>
+              <div class="dd-feature"><i class="fas fa-circle-check"></i>Analytics dashboard</div>
+              <div class="dd-feature"><i class="fas fa-circle-check"></i>Learning streak monitoring</div>
+            </div>
+            <div class="dd-footer">
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">PostgreSQL</span>
+              </div>
+              <a href="https://github.com/" target="_blank" class="btn btn-sm btn-dd-gh">
+                <i class="fab fa-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       PROJECTS — Bootstrap Cards + Tabs
+  ═══════════════════════════════════ -->
+  <section id="projects" class="py-section bg-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-eyebrow mx-auto">// Projects</div>
+        <h2 class="section-h2">Things I've Built</h2>
+      </div>
+
+      <!-- Bootstrap Nav Tabs for filter -->
+      <ul class="nav nav-tabs project-tabs justify-content-center mb-5" id="projectTabs">
+        <li class="nav-item"><button class="nav-link active" data-filter="all">All Projects</button></li>
+        <li class="nav-item"><button class="nav-link" data-filter="fullstack">Full-Stack</button></li>
+        <li class="nav-item"><button class="nav-link" data-filter="backend">Backend</button></li>
+        <li class="nav-item"><button class="nav-link" data-filter="realtime">Real-Time</button></li>
+      </ul>
+
+      <div class="row g-4" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       EDUCATION
+  ═══════════════════════════════════ -->
+  <section id="education" class="py-section">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-5">
+          <div class="section-eyebrow">// Education</div>
+          <h2 class="section-h2">Academic<br/><span class="text-accent">Background</span></h2>
+
+          <!-- Bootstrap Card for degree -->
+          <div class="edu-degree-card">
+            <div class="edu-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h4 class="edu-degree">B.Sc. in Computer Science</h4>
+              <p class="edu-status"><span class="status-badge">In Progress</span></p>
+              <p class="edu-note">Undergraduate — Currently Enrolled</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="section-eyebrow">// Coursework</div>
+          <div class="row g-3" id="coursesGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       BLOG
+  ═══════════════════════════════════ -->
+  <section id="blog" class="py-section bg-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-eyebrow mx-auto">// Writing</div>
+        <h2 class="section-h2">Blog & Learnings</h2>
+      </div>
+      <div class="row g-4" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       CONTACT — Bootstrap Form
+  ═══════════════════════════════════ -->
+  <section id="contact" class="py-section">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-eyebrow mx-auto text-center">// Contact</div>
+        <h2 class="section-h2 text-center">Let's Work Together</h2>
+        <p class="contact-sub text-center">Open to internships, freelance, and collaboration.</p>
+
+        <!-- Bootstrap Grid for contact links -->
+        <div class="row g-3 justify-content-center mb-5" id="contactLinksRow"></div>
+
+        <!-- Bootstrap Form -->
+        <div class="contact-form-card">
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control custom-input" placeholder="Menuka" required/>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control custom-input" placeholder="you@example.com" required/>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-control custom-input" placeholder="What's this about?"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control custom-input" rows="5" placeholder="Tell me about your project..." required></textarea>
+                <div class="invalid-feedback">Please write a message.</div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-hero-primary px-5">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+          <!-- Bootstrap Alert for success -->
+          <div class="alert alert-success-custom d-none mt-4" id="formSuccess" role="alert">
+            <i class="fas fa-circle-check me-2"></i>
+            Message sent! I'll get back to you within 24 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;</span>MD<span class="brand-bracket">/&gt;</span>
+          <p>Building systems that matter.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:your-email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Menuka Dewsith</span>
+        <span>Built with Bootstrap 5 &amp; Vanilla JS</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Tooltip init -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
